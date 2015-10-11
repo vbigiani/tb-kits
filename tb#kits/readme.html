@@ -1,0 +1,552 @@
+<html>
+<head>
+
+<style type="text/css">
+/*<![CDATA[*/
+<!-- 
+	body {
+		cursor: default;
+		text-align: center;
+		color: #000;
+		background-color: #A1A1A1;
+		margin-top: 20px;
+		margin-bottom: -20px;
+		xwidth: 98%;
+	}
+	
+	#headerdiv-top {
+		text-align: center;
+		font-family: Verdana, Trebuchet MS, Arial, serif;
+		font-size: 200%;
+		font-weight: bold;
+		line-height: 73%;
+		color #020F1D;
+		background-color: #fff;
+		padding: 15px 0px 15px 0px;
+		margin: 0px auto;
+		border-left: solid 1px #532529;
+		border-right: solid 1px #532529;
+		border-bottom: solid 1px #532529;
+		border-top: solid 3px #532529;
+		width: 90%;
+		position: relative;
+		display: block;
+	}
+	
+	#headerdiv-middle {
+		text-align: center;
+		font: italic 75% Verdana, Trebuchet MS, Arial, serif;
+		color: #bbb;
+		font-weight: normal;
+		background-color: #F1F1F1;
+		width: 90%;
+		border-left: solid 1px #532529;
+		border-right: solid 1px #532529;
+		margin: 0px auto;
+		padding: 10px 0px 10px 0px;
+		position: relative;
+		display: block;
+	}
+	
+	.headerdiv-line {
+		color: #532529;
+	}
+	
+	#headerdiv-middle a:link, #headerdiv-middle a:visited {
+		text-decoration: underline;
+		background-color: transparent;
+		color: #000;
+	}
+	
+	#headerdiv-middle a:focus, #headerdiv-middle a:hover {
+		text-decoration: underline;
+		color: #532539;
+	}
+	
+	#headerdiv-middle a:active {
+		color: #000;
+		text-decoration: line-through;
+		border: none;
+	}
+
+	#headerdiv-bottom {
+		text-align: center;
+		font: 83% Verdana, Trebuchet MS, Arial, serif;
+		color: #aaa;
+		padding: 8px 0px 8px 0px;
+		margin: 0px auto;
+		border-left: solid 1px #532529;
+		border-right: solid 1px #532529;
+		border-bottom: solid 3px #532529;
+		border-top: solid 1px #bbb;
+		width: 90%;
+		background-color: #F1F1F1;
+		position: relative;
+		display: block;
+	}
+
+	#maindiv {
+		text-align: center;
+		font-family: Verdana, Trebuchet MS, Arial, serif;
+	}
+	
+	#maindiv div {
+		background-color: #F1F1F1;
+		color: #020F1D;
+		padding: 11px 0px 25px 0px;
+		margin: 50px auto;
+		border-width: 1px 1px 4px 10px;
+		border-style: solid;
+		border-color: #532529;
+		width: 80%;
+		position: relative;
+		display: block;
+	}
+	
+	#maindiv div::before {
+		content: counter(kman, lower-roman);
+		counter-increment: kman;
+		font-size: 100%;
+		font-weight: bold;
+		color: #fff;
+		background-color: #532529;
+		width: 42px;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		display: block;
+	}
+	
+	#maindiv p {
+		font-size: 83%;
+		font-style: normal;
+		text-align: justify;
+		line-height: 160%;
+		padding: 0px;
+		margin: 10px auto;
+		width: 90%;
+		display: block;
+	}
+	
+	#headerdiv-bottom a:link, #headerdiv-bottom a:visited {
+		font-weight: bold;
+		text-decoration: none;
+		background-color: transparent;
+		color: #000;
+	}
+	
+	#headerdiv-bottom a:focus, #headerdiv-bottom a:hover {
+		text-decoration: none;
+		color: #532539;
+	}
+	
+	#headerdiv-bottom a:active {
+		color: #000;
+		text-decoration: line-through;
+		border: none;
+	}
+	
+	#maindiv address a:link, #maindiv address a:visited {
+		font-weight: bold;
+		text-decoration: underline;
+		background-color: transparent;
+		color: #fff;
+	}
+	
+	#maindiv address a:focus, #maindiv address a:hover {
+		text-decoration: underline;
+		color: #532539;
+	}
+	
+	#maindiv address a:active {
+		color: #fff;
+		text-decoration: line-through;
+		border: none;
+	}
+	
+	#maindiv address {
+		font-size: 70%;
+		font-style: normal;
+		text-decoration: none;
+		color: #959FAA;
+		background-color: #532529;
+		padding: 3px 0px 0px;
+		margin: 0px;
+		width: 100%;
+		position: absolute;
+		bottom: -1px;
+		left: 0px;
+		display: block;
+		text-align: right;
+	}
+
+	.address-footer-1 {
+		letter-spacing: 0.2em;
+	}
+	
+	h4 {
+		font-family: Verdana, Trebuchet MS, Arial, serif;
+		font-size: 150%;
+		text-align: left;
+		text-indent: 30px;
+		padding: 0px 0px 0px 0px;
+		border-bottom: dotted 2px #ddd;
+	}
+
+	h5 {
+		font-family: Verdana, Trebuchet MS, Arial, serif;
+		font-size: 120%;
+		text-align: left;
+		text-indent: 30px;
+		padding: 0px 0px 0px 0px;
+	}
+
+	h4::first-letter {
+		color: #532529;
+		background-color: transparent;
+	}
+	
+	body h1, body #maindiv h3, h1+h2, body #maindiv h4 {
+	font-weight: bold;
+	display: block;
+	}
+	
+	#maindiv .divimp {
+		font-size: 80%;
+		font-family: Verdana;
+		text-align: left;
+		background-color: #E1E1E1;
+		border-top: solid 1px #bbb;
+		border-bottom: solid 1px #bbb;
+		border-left: solid 6px #bbb;
+		border-right: solid 6px #bbb;
+		padding: 10px;
+		margin: 20px auto;
+		line-height: 150%;
+	}
+	
+	#maindiv .divimp::before {
+		display: none;
+	}
+	
+	#maindiv .divimp p {
+		font-size: 100%;
+		text-indent: 0px;
+	} 
+	
+	.list-numbered {
+		list-style-type: decimal;
+		margin-top: 0px;
+	}
+	
+	#headerdiv-top-fw {
+		font-size: 40%;
+		color: #532529;
+		margin: 0px;
+		padding-top: 9px;
+		display: block;
+	}
+	
+	.faq-q {
+		font-weight: bold;
+		font-style: italic;
+		text-align: justify;
+	}
+
+	.faq-a {
+		text-align: justify;
+	}
+
+	#maindiv .version {
+		display: block;
+		width: 100%;
+		background-color: #F1F1F1;
+		text-align: left;
+		text-indent: 30px;
+		font-style: italic;
+		padding-top: 1px;
+		padding-bottom: 1px;
+		border-bottom: solid 1px #bbb;
+		border-top: solid 1px #bbb;
+	}
+
+	.version-list {
+		line-height: 150%;
+		font-size: 80%;
+		text-align: left;
+		list-style-type: square;
+	}
+-->
+/*]]>*/
+</style>
+<title>The Bigg Kit Pack Readme</title>
+
+
+	<body>
+		<a name="top" id="top"></a>
+		<div id="headerdiv-top">
+			The Bigg Kit Pack<br>
+			<span id="headerdiv-top-fw">A Spellhold Studios mod</span>
+		</div>
+		<div id="headerdiv-middle">
+			<span class="headerdiv-line">Author: the bigg</span> | <span class="headerdiv-line"><a href="http://www.shsforums.net/topic/58357-the-bigg-kit-pack/">Thread</a></span> | <span class="headerdiv-line"><a href="https://github.com/vbigiani/bigg_misc_mods">Git repository</a></span> | <span class="headerdiv-line">Version: 1.0</span>
+		</div>
+		<div id="headerdiv-bottom">
+			<a href="#intro">Introduction</a> | <a href="#components">Components</a> | <a href="#installation">Installation</a> | <a href="#issues">Known issues</a> | <a href="#compatibility">Compatibility notes</a> | <a href="#faq">FAQ</a> | <a href="#version">Version history</a> | <a href="#credits">Credits</a> | <a href="#contact">Contact info</a>
+		</div><a name="intro" id="intro"></a>
+		<div id="maindiv">
+
+			<!-- ================== I n t r o d u c t i o n ================== -->
+			<div>
+				<h4>
+					Introduction
+				</h4>
+				<p>
+					This mod is a collection of characters kits for Baldur's Gate 2. As of now, the mod contains a single kit, the Biotic Vanguard (inspired from the Vanguard class in Mass Effect 3).
+		</p>
+				<address>
+					<span class="address-footer-1">The Bigg Kit Pack &gt; Introduction</span>
+						<a href="#top">BACK TO TOP</a>
+				</address>
+			</div>
+
+			<!-- ================== C o m p o n e n t s ================== -->
+			<a name="components" id="components"></a>
+			<div>
+				<h4>
+					Components
+				</h4>
+				<p>
+					List of currently available kits (each kit will link to the kit description):
+				</p>
+				<div class="divimp">
+					<ul class="list-numbered">
+						<li><a href="#vanguard">Biotic Vanguard (ME3)</a></li>
+					</ul>
+				</div>
+				</p>
+
+				<a name="vanguard" id="Biotic Vanguard"></a>
+				<h5>
+					Biotic Vanguard (inspired from the Vanguard class in Mass Effect 3, and in particular the Asari Vanguard in the multiplayer section)
+				</h5>
+				<p>
+				<div class="divimp">
+By digesting a substance known as Red Sand, these warriors benefit from increased speed, and have developed the ability to forcibly slam their bodies into their enemies, damaging them while healing themselves. However, such a fighting style imposes several sacrifices on the warrior himself, as he can no longer wear armor, and can use single-handed weapons, but only clumsily so.
+<br />
+Advantages:
+<ul>
+<li>Bonus -1 to speed factor and +1 movement speed for every 4 levels (starting at 1st level)</li>
+<li>Bonus +1 to hit and -1 to AC for every 6 levels (starting at 3rd level)</li>
+<li>May use the 'Biotic Charge' ability once per 18 seconds (no daily limit). The warrior is launched at full speed at an enemy, while his wounds are closed and nearby foes are damaged and briefly stunned by the force of the impact:</li>
+<ul><li>The warrior gains 6 hit points, plus one for every level (upt to a maximum of 44 hit points at 20th level). If the warrior goes over his maximum hit point total with this ability, he loses it after six seconds.</li>
+  <li>Enemies in a 15' radius from the selected target suffer the following effects:</li>
+    <ul><li>1st  level:  2d4 crushing damage, stun for 1 second. Save vs. breath at +4 halves the damage and avoids the stun</li>
+    <li>5th  level:  4d4 crushing damage, stun for 1 second. Save vs. breath at +3 halves the damage and avoids the stun</li>
+    <li>9th  level:  6d4 crushing damage, stun for 1 second. Save vs. breath at +2 halves the damage and avoids the stun</li>
+    <li>13th level:  8d4 crushing damage, stun for 1 second. Save vs. breath at +1 halves the damage and avoids the stun</li>
+    <li>17th level: 10d4 crushing damage, stun for 1 second. Save vs. breath at +0 halves the damage and avoids the stun</li>
+	</ul>
+</ul>
+<li>May choose the 'Lift Grenade' High Level ability, which creates a much stronger explosion than 'Biotic Charge': enemies in a 15' radius suffer 20d4 crushing damage and are stunned for 6 seconds. A save vs. breath at -2 halves the damage and avoids the stun.</li>
+</ul>
+
+<br /><br />Disadvantages:
+<ul><li>May not use missile weapons</li>
+<li>May not wear armor</li>
+<li>May not wear gauntlets or bracers</li>
+<li>Cannot specialize in one-handed weapons</li>
+<li>Cannot become proficient in any fighting style other than two-handed weapons</li>
+</ul>
+				</div>
+				</p>
+				
+				<address>
+					<span class="address-footer-1">The Bigg Kit Pack &gt; Components</span>
+					<a href="#top">BACK TO TOP</a>
+				</address>
+			</div>
+
+			<!-- ================== I n s t a l l a t i o n ================== -->
+			<a name="installation" id="installation"></a>
+			<div>
+				<h4>
+					Installation
+				</h4>
+				<p>
+				<div class="divimp">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a nulla vel felis elementum semper quis ac turpis. Suspendisse at augue id odio dignissim lacinia id eu tortor. Quisque dapibus lectus lectus, vel lobortis lacus tincidunt in. Nam placerat risus urna, ac lacinia justo elementum ac. Vivamus condimentum elit mi, id finibus risus aliquam facilisis. Vivamus placerat libero sit amet tristique tempus. Nulla semper viverra ipsum quis tempus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer nec vestibulum eros, et molestie mauris. Aenean rhoncus porttitor dolor in scelerisque.
+					<br />
+					<br />Nam id ultricies est. Sed ac nulla dapibus, suscipit dui vel, imperdiet justo. Nullam laoreet dolor ac dui lobortis viverra. Nulla dignissim, diam feugiat dictum scelerisque, arcu mauris rhoncus diam, sit amet euismod nulla dui et ante. In hac habitasse platea dictumst. Sed scelerisque odio auctor laoreet finibus. Nam vitae ante in diam maximus elementum rutrum at diam. Suspendisse quis mauris massa. Fusce blandit, massa et ullamcorper interdum, nisi nibh mattis sem, vel tempor felis libero nec lorem.
+					<br />
+					<br />Vestibulum dictum justo finibus dui pharetra, sit amet pulvinar justo dictum. Sed auctor elit vel tortor fringilla eleifend at sit amet arcu. Integer eleifend tristique eleifend. Aenean a pellentesque risus. Sed pellentesque nunc sed urna pharetra vestibulum. Nam mollis bibendum lacus quis euismod. Nullam non nisl ut felis rutrum mattis. Integer lacinia, massa eget finibus vehicula, est tellus porta turpis, ac tempus lacus eros ac diam. Nullam porttitor lorem sit amet pulvinar pretium. Vestibulum neque quam, congue vitae commodo et, venenatis a ante.
+				</div>
+				</p>
+
+		<address>
+					<span class="address-footer-1">The Bigg Kit Pack &gt; Installation</span>
+						<a href="#top">BACK TO TOP</a>
+				</address>
+			</div>
+
+			<!-- ================== K n o w n  issues ================== -->
+			<a name="issues" id="issues"></a>
+			<div>
+				<h4>
+					Known Issues
+				</h4>
+				<h5>
+					Biotic Vanguard kit
+				</h5>
+				<p>
+				<div class="divimp">
+					This release is of alpha quality, and has the following known issues:
+					<ul>
+					<li>Chances are that the mod is not correctly balanced, compared to the rest of the character kits.</li>
+					<li>'Biotic Charge' has a change of propelling you past a locked door, potentially breaking the game if you were not supposed to go past that door at that point.</li>
+					<li>The 'Lift Grenade' High Level Ability is missing its icon in the Level-up menu (it can still be selected and cast normally).</li>
+					<li>Both 'Biotic Charge' and 'Lift Grenade' don't display the explosion animation if cast on a party member.</li>
+					<li>Icons and sounds can be improved.</li>
+					</ul>
+				</div>
+				</p>
+		<address>
+					<span class="address-footer-1">The Bigg Kit Pack &gt; Known issues</span>
+						<a href="#top">BACK TO TOP</a>
+				</address>
+			</div>
+			<!-- ================== C o m p a t i b i l i t y ================== -->
+			<a name="compatibility" id="compatibility"></a>
+			<div>
+				<h4>
+					Compatibility notes
+				</h4>
+				<h5>
+					In General
+				</h5>
+				<p>
+				<div class="divimp">
+					The mod must be installed in the middle of the install order; in particular, before tweak packs.
+				</div>
+				</p>
+				<h5>
+					Biotic Vanguard kit
+				</h5>
+				<p>
+				<div class="divimp">
+					If you install a mod that adds two-handed versions of some weapons (E.G. two-handed axes from BG2_Tweaks),
+					you still won't be able to specialize in such weapon classes.
+				</div>
+				</p>
+		<address>
+					<span class="address-footer-1">The Bigg Kit Pack &gt; Compatibility Notes</span>
+						<a href="#top">BACK TO TOP</a>
+				</address>
+			</div>
+
+			<!-- ================== F A Q ================== -->
+			<a name="faq" id="faq"></a>
+			<div>
+				<h4>
+					Frequently Asked Questions
+				</h4>
+				<p>
+					<span class="faq-q">Q: I've found a bug / incompatibility / have a suggestion!</span><br>
+					<span class="faq-a">A: <a href="#contact">Contact me</a> and I'll deal with it
+					as soon as possible.</span>
+					<br>
+					<span class="faq-q">Q: Do you call this a FAQ?</span><br>
+					<span class="faq-a">A: <a href="#contact">Yes. <a href="#contact">Contact me</a> if you want to suggest a new FAQ to add here  :)</span>
+				</p>
+				<address>
+					<span class="address-footer-1">The Bigg Kit Pack &gt; Frequently Asked
+					Questions</span>       <a href="#top">BACK TO TOP</a>
+				</address>
+			</div>
+
+			<!-- ================== Version History ================== -->
+			<a name="version" id="version"></a>
+			<div>
+				<h4>
+					Version History
+				</h4>
+
+		<p class="version">
+					Version 1.00:
+		</p>
+		<ul class="version-list">
+			<li>First release: Biotic Vanguard.</li>
+		</ul>
+
+		<address>
+					<span class="address-footer-1">The Bigg Kit Pack &gt; Version History</span>
+								<a href="#top">BACK TO TOP</a>
+				</address>
+			</div>
+
+			<!-- ================== Credits ================== -->
+			<a name="credits" id="credits"></a>
+			<div>
+				<h4>
+					Credits
+				</h4>
+				<div class="divimp">
+				
+				<p>
+					This mod was developed by Valerio Bigiani (A.K.A. the bigg).
+				</p><p>Portions of code were borrowed from the following mods:
+					<ul>
+					<li><a href="http://www.spellholdstudios.net/ie/refinements">Refinements</a> (by Littiz, T.G.Maestro and myself)</li>
+					<li><a href="http://www.gibberlings3.net/item_rev/">Item Revision</a> (by Demivrgvs and Mike1072</li>
+					</ul>
+				</p>
+				<p>
+				The following tools were used inthe making of this thread:<ul>
+					<li><a href="http://www.weidu.org/"><acronym title="Weimer Dialogue Utility">WeiDU</acronym></a> by Wes Weimer, myself and Fredrik Lindgren</li>
+					<li><a href="http://www.shsforums.net/topic/42359-release-bam-batcher/">BAM Batcher</a> by Miloch</li>
+					<li><a href="https://github.com/Argent77/NearInfinity/">Near Infinity</a> by Jon Olav Hauglid and Argent77</li>
+					<li><a href="http://www.getpaint.net/">Paint.NET</a> by Rick Brewster</li>
+					<li><a href="http://www.coranac.com/projects/usenti/">Usenti</a> by Jasper Vijn</li>
+					<li><a href="https://notepad-plus-plus.org/">Notepad++</a> by Don Ho</li></ul>
+				</p>
+				</div>
+
+				<address>
+					<span class="address-footer-1">The Bigg Kit Pack &gt; Credits</span>
+					<a href="#top">BACK TO TOP</a>
+				</address>
+			</div>
+
+			<!-- ================== C O N T A C T   I N F O ================== -->
+			<a name="contact" id="contact"></a>
+			<div>
+				<h4>
+					Contact Info:
+				</h4>
+				<div class="divimp">
+				<p>
+					I welcome any kind of bug report, incompatibility issue report, suggestion and constructive
+					criticism, and I'll take it in highest consideration.
+					<br>Since I am no longer actively modding the games and/or monitoring the forums, to ensure that
+					you receive your answers as quickly as possible, I ask that you do as follows:
+					<ul><li>If reporting a bug or suggestion, post on 
+					<a href="http://www.shsforums.net/topic/58357-the-bigg-kit-pack/" target="_blank">the mod thread</a>,
+					since this way all the interested players will be able to contribute their ideas.</li>
+					<li>If contributing code of any king (bugfixes, translations, ...), you do so via
+					<a href="https://github.com/vbigiani/bigg_misc_mods">the Git repository</a>, while additionally
+					dropping a note on the mod thread.
+					</ul>
+					</p>
+					<p>Contacting me via private channels (E.G. e-mail) will only ensure slower responses than if you
+					were to contact me via public channels, as above.
+				</p>
+				</div>
+				
+				<address>
+					<span class="address-footer-1">The Bigg Kit Pack &gt; Contact Info</span>
+					<a href="#top">BACK TO TOP</a>
+				</address>
+			</div>
+
+		</div>
+</body></html>
