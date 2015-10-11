@@ -1,21 +1,17 @@
 BACKUP ~tb#kits/backup~
 AUTHOR ~The Bigg (vbigiani@gmail.com)~
-VERSION @0
+VERSION ~1.0~
 
-README ~tb#kits/tra/%LANGUAGE%/readme.html~
+README ~tb#kits/readme.html~
 
-LANGUAGE ~english~
-	 ~english~
-	 ~tb#kits/tra/english/setup.tra~
-
-BEGIN @1
+BEGIN ~Biotic Vanguard~
 
 ADD_PROJECTILE ~tb#kits/tb#kav/pro/tb#kavbu.pro~
 
 COPY ~tb#kits/tb#kav/res~ ~override~
 
 COPY ~tb#kits/tb#kav/spl/tb#kavbc.spl~ ~override~
-	SAY NAME1 @2
+	SAY NAME1 ~Biotic Charge~
 	FOR(i = 1; i < 20; i += 1) BEGIN
 		READ_LONG  0x64 header_off
 		READ_SHORT 0x68 header_cnt
@@ -83,8 +79,11 @@ COPY ~tb#kits/tb#kav/spl/tb#kavbu.spl~ ~override~
 
 COPY ~tb#kits/tb#kav/spl/tb#kavlg.spl~ ~override~
 	WRITE_SHORT 0x98 %tb#kavbu%
-	SAY NAME1 @3
-	SAY UNIDENTIFIED_DESC @4
+	SAY NAME1 ~Lift Grenade~
+	SAY UNIDENTIFIED_DESC ~Lift Grenade
+Powerful Vanguards have learned how to generate strong blows on their enemies without using their own bodies.
+
+Enemies in a 15' radius from the impact point suffer 20d4 crushing damage and are stunned for 6 seconds. A save vs. breath at -2 halves the damage and avoids the stun~
 
 ADD_KIT ~TB#KAV~
 	// appended to CLASWEAP.2da
@@ -114,6 +113,26 @@ ADD_KIT ~TB#KAV~
 	~* * HELM19 BAG22 RING06 RING29 CLCK02 BOOT01 AMUL19 BRAC14 BELT06 * * * POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~
 	
 	// Lower, mixed, and help kit names and descriptions, added to KITLIST.2da 
-	SAY @5
-	SAY @1
-	SAY @6
+	SAY ~biotic vanguard~
+	SAY ~Biotic Vanguard~
+	SAY ~BIOTIC VANGUARD: By digesting a substance known as Red Sand, these warriors benefit from increased speed, and have developed the ability to forcibly slam their bodies into their enemies, damaging them while healing themselves. However, such a fighting style imposes several sacrifices on the warrior himself, as he can no longer wear armor, and can use single-handed weapons, but only clumsily so.
+
+Advantages:
+-  Bonus -1 to speed factor and +1 movement speed for every 4 levels (starting at 1st level)
+-  Bonus +1 to hit and -1 to AC for every 6 levels (starting at 3rd level)
+-  May use the 'Biotic Charge' ability once per 18 seconds (no daily limit). The warrior is launched at full speed at an enemy, while his wounds are closed and nearby foes are damaged and briefly stunned by the force of the impact:
+  -  The warrior gains 6 hit points, plus one for every level (upt to a maximum of 44 hit points at 20th level). If the warrior goes over his maximum hit point total with this ability, he loses it after six seconds.
+  -  Enemies in a 15' radius from the selected target suffer the following effects:
+    -  1st  level:  2d4 crushing damage, stun for 1 second. Save vs. breath at +4 halves the damage and avoids the stun
+    -  5th  level:  4d4 crushing damage, stun for 1 second. Save vs. breath at +3 halves the damage and avoids the stun
+    -  9th  level:  6d4 crushing damage, stun for 1 second. Save vs. breath at +2 halves the damage and avoids the stun
+    -  13th level:  8d4 crushing damage, stun for 1 second. Save vs. breath at +1 halves the damage and avoids the stun
+    -  17th level: 10d4 crushing damage, stun for 1 second. Save vs. breath at +0 halves the damage and avoids the stun
+- May choose the 'Lift Grenade' High Level ability, which creates a much stronger explosion than 'Biotic Charge': enemies in a 15' radius suffer 20d4 crushing damage and are stunned for 6 seconds. A save vs. breath at -2 halves the damage and avoids the stun.
+
+Disadvantages:
+-  May not use missile weapons
+-  May not wear armor
+-  May not wear gauntlets or bracers
+-  Cannot specialize in one-handed weapons
+-  Cannot become proficient in any fighting style other than two-handed weapons~

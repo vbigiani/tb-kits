@@ -1,0 +1,30 @@
+@0    = ~1.0~
+@1    = ~Biotic Vanguard~
+@2    = ~Biotic Charge~
+@3    = ~Lift Grenade~
+@4    = ~Lift Grenade
+Powerful Vanguards have learned how to generate strong blows on their enemies without using their own bodies.
+
+Enemies in a 15' radius from the impact point suffer 20d4 crushing damage and are stunned for 6 seconds. A save vs. breath at -2 halves the damage and avoids the stun~
+@5    = ~biotic vanguard~
+@6    = ~BIOTIC VANGUARD: By digesting a substance known as Red Sand, these warriors benefit from increased speed, and have developed the ability to forcibly slam their bodies into their enemies, damaging them while healing themselves. However, such a fighting style imposes several sacrifices on the warrior himself, as he can no longer wear armor, and can use single-handed weapons, but only clumsily so.
+
+Advantages:
+-  Bonus -1 to speed factor and +1 movement speed for every 4 levels (starting at 1st level)
+-  Bonus +1 to hit and -1 to AC for every 6 levels (starting at 3rd level)
+-  May use the 'Biotic Charge' ability once per 18 seconds (no daily limit). The warrior is launched at full speed at an enemy, while his wounds are closed and nearby foes are damaged and briefly stunned by the force of the impact:
+  -  The warrior gains 6 hit points, plus one for every level (upt to a maximum of 44 hit points at 20th level). If the warrior goes over his maximum hit point total with this ability, he loses it after six seconds.
+  -  Enemies in a 15' radius from the selected target suffer the following effects:
+    -  1st  level:  2d4 crushing damage, stun for 1 second. Save vs. breath at +4 halves the damage and avoids the stun
+    -  5th  level:  4d4 crushing damage, stun for 1 second. Save vs. breath at +3 halves the damage and avoids the stun
+    -  9th  level:  6d4 crushing damage, stun for 1 second. Save vs. breath at +2 halves the damage and avoids the stun
+    -  13th level:  8d4 crushing damage, stun for 1 second. Save vs. breath at +1 halves the damage and avoids the stun
+    -  17th level: 10d4 crushing damage, stun for 1 second. Save vs. breath at +0 halves the damage and avoids the stun
+- May choose the 'Lift Grenade' High Level ability, which creates a much stronger explosion than 'Biotic Charge': enemies in a 15' radius suffer 20d4 crushing damage and are stunned for 6 seconds. A save vs. breath at -2 halves the damage and avoids the stun.
+
+Disadvantages:
+-  May not use missile weapons
+-  May not wear armor
+-  May not wear gauntlets or bracers
+-  Cannot specialize in one-handed weapons
+-  Cannot become proficient in any fighting style other than two-handed weapons~
