@@ -117,3 +117,102 @@ ADD_KIT ~TB#KAV~
 	SAY @5
 	SAY @1
 	SAY @6
+
+
+BEGIN @7
+REQUIRE_COMPONENT ~tb#kits/tb#kits.tp2~ 0 @8
+REQUIRE_COMPONENT ~HAIASS/SETUP-HAIASS.TP2~ 0 @9
+
+<<<<<<<< .../haiass.baf
+IF
+  Global("tb#HaiassVanguard","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tb#HaiassVanguard","GLOBAL",1)
+    AddSpecialAbility("tb#kavbc")
+END
+
+//********************************* Defenderse (HaiassTactica 2) ************
+IF
+  AttackedBy([EVILCUTOFF],DEFAULT)
+  Global("HaiassTactica","GLOBAL",2)
+  HaveSpellRES("tb#kavbc")
+THEN
+  RESPONSE #100
+    SpellRES("tb#kavbc", LastAttackerOf(Myself))
+END
+
+//********************* Atacar lanzadores de conjuros (HaiassTactica 3) *****
+IF
+  Global("HaiassTactica","GLOBAL",3)
+  Global("HaiassQuieto","GLOBAL",0)
+  OR(4)
+    See(NearestEnemyOfType([0.GENERAL_ITEM.0.MAGE_ALL]))
+    See(NearestEnemyOfType([0.GENERAL_ITEM.0.CLERIC_ALL]))
+    See(NearestEnemyOfType([0.GENERAL_ITEM.0.DRUID_ALL]))
+    See(NearestEnemyOfType([0.GENERAL_ITEM.0.BARD_ALL]))
+  HaveSpellRES("tb#kavbc")
+THEN
+  RESPONSE #100
+    SpellRES("tb#kavbc", LastSeenBy(Myself))
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("HaiassTactica","GLOBAL",3)
+  HaveSpellRES("tb#kavbc")
+THEN
+  RESPONSE #100
+    SpellRES("tb#kavbc", Nearestenemyof(Myself))
+END
+
+//************************* Defender a CHARNAME (HaiassTactica 4)************
+IF
+  See(Protagonist)
+  Exists(LastAttackerOf(Protagonist))
+  Global("HaiassTactica","GLOBAL",4)
+  Global("HaiassQuieto","GLOBAL",0)
+  HaveSpellRES("tb#kavbc")
+THEN
+  RESPONSE #100
+    SpellRES("tb#kavbc", LastAttackerOf(Protagonist))
+END
+
+IF
+  AttackedBy([EVILCUTOFF],DEFAULT)
+  Global("HaiassTactica","GLOBAL",4)
+  HaveSpellRES("tb#kavbc")
+THEN
+  RESPONSE #100
+    SpellRES("tb#kavbc", LastAttackerOf(Myself))
+END
+
+//*************************** Atacar enemigos (HaiassTactica 0) *************
+IF
+  AttackedBy([EVILCUTOFF],DEFAULT)
+  !Global("HaiassTactica","GLOBAL",4)
+  !Global("HaiassTactica","GLOBAL",3)
+  !Global("HaiassTactica","GLOBAL",2)
+  !Global("HaiassTactica","GLOBAL",1)
+  HaveSpellRES("tb#kavbc")
+THEN
+  RESPONSE #100
+    SpellRES("tb#kavbc", LastAttackerOf(Myself))
+END
+
+IF
+  Global("HaiassQuieto","GLOBAL",0)
+  See(NearestEnemyOf(Protagonist))
+  !Global("HaiassTactica","GLOBAL",4)
+  !Global("HaiassTactica","GLOBAL",3)
+  !Global("HaiassTactica","GLOBAL",2)
+  !Global("HaiassTactica","GLOBAL",1)
+  HaveSpellRES("tb#kavbc")
+THEN
+  RESPONSE #100
+    SpellRES("tb#kavbc", NearestEnemyOf(Protagonist))
+END
+
+>>>>>>>>
+
+EXTEND_TOP ~haiass.bcs~ ~.../haiass.baf~

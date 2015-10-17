@@ -1,4 +1,4 @@
-@0    = ~1.0~
+@0    = ~1.1~
 @1    = ~Biotic Vanguard~
 @2    = ~Biotic Charge~
 @3    = ~Lift Grenade~
@@ -28,3 +28,6 @@ Disadvantages:
 -  May not wear gauntlets or bracers
 -  Cannot specialize in one-handed weapons
 -  Cannot become proficient in any fighting style other than two-handed weapons~
+@7    = ~Add Biotic Charge to Haiass the Wolf~
+@8    = ~Requires the Biotic Vanguard Kit~
+@9    = ~Requires Haiass the Wolf~
