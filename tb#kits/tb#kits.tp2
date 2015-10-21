@@ -132,6 +132,33 @@ THEN
     AddSpecialAbility("tb#kavbc")
 END
 
+IF
+  Global("tb#HaiassVanguard","GLOBAL",1)
+  !HaveSpellRES("tb#kavbc")
+THEN
+  RESPONSE #100
+    SetGlobal("tb#HaiassVanguard","GLOBAL",2)
+	SetGlobalTimer("tb#HaiassChargeMissing","GLOBAL",36)
+END
+
+IF
+  Global("tb#HaiassVanguard","GLOBAL",2)
+  HaveSpellRES("tb#kavbc")
+THEN
+  RESPONSE #100
+    SetGlobal("tb#HaiassVanguard","GLOBAL",1)
+END
+
+IF
+  Global("tb#HaiassVanguard","GLOBAL",2)
+  !HaveSpellRES("tb#kavbc")
+  GlobalTimerExpired("tb#HaiassChargeMissing","GLOBAL")
+THEN
+  RESPONSE #100
+    SetGlobal("tb#HaiassVanguard","GLOBAL",1)
+    AddSpecialAbility("tb#kavbc")
+END
+
 //********************************* Defenderse (HaiassTactica 2) ************
 IF
   AttackedBy([EVILCUTOFF],DEFAULT)
